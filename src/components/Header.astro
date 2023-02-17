@@ -1,25 +1,29 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import Topnav from "./Topnav.astro";
+import SaveIcon from "../icons/SaveIcon.astro";
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
+<header class='flex justify-between flex-wrap w-full'>
+  <div class='title'>
+    <a
+      href='/'
+      class='text-6xl font-bold uppercase leading-none flex items-center'
+    >
+      <div class='logo'>
+        <div class='blob'></div>
+        <SaveIcon />
+      </div>
+
+      {
+        String(Astro.url) === "/" ? (
+          <h1 class='text-2xl md:text-5xl title-text'>Raphaël Ferrand</h1>
+        ) : (
+          <p class='text-2xl md:text-5xl  title-text mb-0'>Raphaël Ferrand</p>
+        )
+      }
+    </a>
+  </div>
+
+  <Topnav />
 </header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>
+<style></style>

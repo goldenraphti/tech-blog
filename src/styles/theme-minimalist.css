@@ -1,0 +1,116 @@
+
+@font-face {
+  font-family: 'BespokeSans-Variable';
+  src: url('/fonts/BespokeSans-Variable.woff2') format('woff2');
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BespokeSans-VariableItalic';
+  src: url('/fonts/BespokeSans-Variable.woff2') format('woff2');
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Recia-Variable';
+  src: url('/fonts/Recia-Variable.woff2') format('woff2');
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Recia-VariableItalic';
+  src: url('/fonts/Recia-VariableItalic.woff2') format('woff2');
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: italic;
+}
+
+body.theme-minimalist {
+  /* --bg-color: #f7f8f6; */
+  --text-color: #1c1c1c;
+  --primary-color: #14b1ab;
+  --primary-color-transparent-10: #14b1ab10;
+  --primary-color-transparent-20: #14b1ab20;
+  --primary-color-light-1: #57d2b5;
+  --secondary-color: #f6416c;
+  --secondary-color-transparent-10: #f6416c10;
+  --secondary-color-transparent-20: #f6416c20;
+  --secondary-color-transparent-80: #f6416c80;
+  --secondary-color-darker-1: #d23669;
+  --logo-bg-gradient-forefront: rgb(228, 10, 10);
+  --logo-bg-gradient: linear-gradient(
+    160deg,
+    var(--primary-color) 0%,
+    rgba(255, 213, 0, 1) 100%
+  );
+  --primary-font-family: 'BespokeSans-Variable', -apple-system,
+    BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji;
+  --secondary-font-family: 'Recia-Variable';
+
+  [data-theme="dark"] > & {
+    --bg-color: #1c1c1c;
+    --text-color: #f7f8f6;
+    --primary-color: #f6416c;
+    --primary-color-transparent-10: #f6416c10;
+    --primary-color-transparent-20: #f6416c20;
+    --primary-color-light-1: #d23669;
+    --secondary-color: #14b1ab;
+    --secondary-color-transparent-10: #14b1ab10;
+    --secondary-color-transparent-20: #14b1ab20;
+    --secondary-color-transparent-30: #14b1ab30;
+    --secondary-color-transparent-80: #14b1ab80;
+    --secondary-color-darker-1: #57d2b5;
+    --logo-bg-gradient-forefront: rgb(228, 10, 10);
+    --logo-bg-gradient: linear-gradient(
+        160deg,
+        var(--primary-color) 0%,
+        rgba(255, 213, 0, 1) 100%
+    );
+  }
+
+  border: 8px solid var(--primary-color-light-1);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+
+  & a {
+    color: var(--secondary-color);
+  }
+
+  & .logo.uppercase-gradient a {
+    font-size: 40px;
+    line-height: 0.8;
+    background: var(--logo-bg-gradient-forefront);
+    background: var(--logo-bg-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media screen and (min-width: 768px) {
+      font-size: 72px;
+    }
+  }
+
+    [data-theme= "dark"] > & {
+    border-color: var(--secondary-color);
+
+    & .logo .blob {
+      background: var(--text-color);
+      opacity: 0.85;
+    }
+
+    & header .title-text,
+    & header a {
+      color: var(--secondary-color);
+    }
+
+    & .posts-list li:hover a {
+      background-color: var(--secondary-color-transparent-20);
+    }
+  }
+}

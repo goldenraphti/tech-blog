@@ -1,13 +1,32 @@
 ---
-const today = new Date();
+import {
+  GITHUB_LINK_ENABLED,
+  RSS_LINK_ENABLED,
+  TWITTER_LINK_ENABLED,
+} from "../consts";
+import CodeIcon from "../icons/CodeIcon.astro";
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class='flex justify-center'>
+  <ul class='flex max-w-2-xl'>
+    <li class='mx-4'>
+      <p>Raphaël Ferrand</p>
+    </li>
+    {
+      GITHUB_LINK_ENABLED && (
+        <li class='mx-4 w-6'>
+          <a href='https://github.com/goldenraphti'>
+            <CodeIcon />
+            <span class='sr-only'>Source code in Github</span>
+          </a>
+        </li>
+      )
+    }
+
+    {TWITTER_LINK_ENABLED && <li class='mx-4'>Twitter</li>}
+
+    {RSS_LINK_ENABLED && <li class='mx-4'>RSS</li>}
+  </ul>
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>
+
+<style></style>

@@ -1,0 +1,272 @@
+
+@custom-media --motionOK (prefers-reduced-motion: no-preference);
+
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --primary-color: green;
+  --primary-color-transparent-10: rgba(249, 129, 139, 10);
+  --primary-color-transparent-20: rgba(249, 129, 139, 20);
+  --primary-color-transparent-80: rgba(249, 129, 139, 80);
+  --secondary-color: rgb(249, 129, 139);
+  --secondary-color-transparent-10: rgba(249, 129, 139, 10);
+  --secondary-color-transparent-20: rgba(249, 129, 139, 20);
+  --secondary-color-alpha-ready: 249, 129, 139;
+  --logo-bg-gradient-forefront: var(--text-color);
+  --logo-bg-gradient: var(--text-color);
+  --gray-light-1: #e8e8e8;
+  --gray-medium-1: #717171;
+  --primary-font-family: 'sans-serif';
+  --secondary-font-family: 'sans-serif';
+  --padding-code-block: 1.3215rem;
+}
+
+html {
+  block-size: 100%;
+  color-scheme: light;
+
+  &[data-theme="dark"] {
+    color-scheme: dark;
+
+    @supports not (color-scheme: dark) {
+      background: #111;
+    }
+  }
+}
+
+footer a,
+footer p {
+  color: var(--gray-medium-1);
+}
+
+header nav {
+  /* overflow: hidden; */
+  & a {
+    font-weight: 600;
+    font-family: var(--primary-font-family);
+  }
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & a {
+    color: var(--secondary-color);
+    font-family: var(--primary-font-family);
+  }
+
+  & main {
+    & h1,
+    & h2,
+    & h3 {
+      font-weight: 600;
+      line-height: 1.2;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    & h1 {
+      font-size: 1.8em;
+    }
+
+    & h2 {
+      font-size: 1.6em;
+    }
+
+    & h3 {
+      font-size: 1.4em;
+    }
+
+    & ul {
+      & li {
+        padding-left: 10px;
+      }
+    }
+
+    & div.bulleted-list ul li::before {
+      content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: var(--secondary-color); /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em;
+    }
+  }
+
+  & .logo {
+    margin: 5px;
+    padding: 12px;
+    position: relative;
+    width: 54px;
+    height: 54px;
+
+    & .blob {
+      background-color: var(--secondary-color);
+      opacity: 0.12;
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    & svg {
+      stroke: var(--primary-color);
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      z-index: 2;
+    }
+  }
+
+  & .title-text {
+    max-width: 6em;
+    font-family: var(--primary-font-family);
+    color: var(--primary-color);
+  }
+
+  &.homepage .title-text {
+    color: var(--secondary-color);
+  }
+}
+
+p,
+pre {
+  margin-bottom: 1.75rem;
+}
+
+ol {
+  list-style: auto;
+  list-style-position: inside;
+}
+
+/* For all <code> */
+code {
+  /* font-family: MyFancyCustomFont, monospace; */
+  font-size: inherit;
+}
+
+/* Code in text */
+p > code,
+li > code,
+dd > code,
+td > code {
+  font-size: 1em;
+  background: var(--primary-color-transparent-20);
+  word-wrap: break-word;
+  box-decoration-break: clone;
+  padding: 0.1rem 0.3rem 0.2rem;
+  border-radius: 0.2rem;
+}
+
+pre code {
+  font-size: 0.85em;
+  display: block;
+  background: #222222;
+  color: #ffffff;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  max-width: 100%;
+  min-width: 100px;
+  border-radius: 10px;
+  padding: var(--padding-code-block);
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    & header .logo {
+      margin: 0 10px 0 0;
+      padding: 20px;
+      width: 90px;
+      height: 90px;
+
+      & .blob {
+        width: 90px;
+        height: 90px;
+      }
+
+      & svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    & main {
+      & h1 {
+        padding-bottom: 40px;
+      }
+
+      & ul li {
+        margin-left: 20px;
+      }
+
+      & .bulleted-list > ul > li {
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      & pre code {
+        margin: 0 calc(var(--padding-code-block) * -1);
+      }
+    }
+  }
+}
+
+.title {
+  max-width: 500px;
+}
+
+footer svg {
+  opacity: 0.7;
+}
+
+footer svg:hover {
+  opacity: 1;
+}
+
+.blob {
+  animation-name: blobby;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
+
+@keyframes blobby {
+  0% {
+    border-radius: 50%;
+  }
+
+  20% {
+    border-radius: 31% 69% 70% 30% / 30% 47% 53% 70%;
+    transform: rotate(36deg);
+  }
+
+  40% {
+    transform: rotate(72deg);
+    border-radius: 43% 57% 41% 59% / 53% 52% 48% 47%;
+  }
+
+  80% {
+    border-radius: 48% 52% 41% 59% / 48% 58% 42% 52%;
+    transform: rotate(108deg);
+  }
+
+  100% {
+    transform: rotate(144deg);
+    border-radius: 54% 46% 60% 40% / 43% 55% 45% 57%;
+  }
+}
