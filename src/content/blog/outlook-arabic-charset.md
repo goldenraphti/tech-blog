@@ -1,5 +1,4 @@
 ---
-layout: layout.liquid
 title: How to fix Outlook breaking the charset
 tags: ["post", "email dev", "outlook", "unicode", "charset", "utf8"]
 pubDate: 2021-09-16
