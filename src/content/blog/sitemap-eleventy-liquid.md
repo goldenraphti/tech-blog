@@ -13,7 +13,6 @@ And the ones I found were all written in .njk, but I am using .liquid all over. 
 ## Create the sitemap file
 
 Create the sitemap.xml.liquid at the root of your website.
-{% raw %}
 
 ```liquid
 ---
@@ -32,7 +31,6 @@ eleventyExcludeFromCollections: true
 </urlset>
 ```
 
-{% endraw %}
 In here you might see the small differences with .njk from the sitemap file on the [blog-starter repo](https://github.com/11ty/eleventy-base-blog/blob/master/sitemap.xml.njk):
 
 <div class='bulleted-list'>
