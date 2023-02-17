@@ -2,11 +2,6 @@
 
 ## Roadmap
 
-- [ ] fix blog post style
-  - [x] fix title
-  - [x] fix code snippets
-- [x] fix dark/light theme toggle functionality
-- [ ] switch old website with this
 - [ ] add publish date to blog posts
 - [ ] add tags to blog posts
 - [ ] enable RSS
