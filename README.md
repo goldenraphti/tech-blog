@@ -4,13 +4,13 @@
 
 - [ ] fix blog post style
   - [x] fix title
-  - [ ] fix code snippets
-  - [ ] add publish date
-  - [ ] add tags
-- [ ] fix dark/light theme toggle functionality
+  - [x] fix code snippets
+- [x] fix dark/light theme toggle functionality
+- [ ] switch old website with this
+- [ ] add publish date to blog posts
+- [ ] add tags to blog posts
 - [ ] enable RSS
 - [ ] add og images & fix SEO for each blog post
-- [ ] switch old website with this
 - [ ] add an About page
 - [ ] add page with links to side projects
 - [ ] add core critical E2E testing
