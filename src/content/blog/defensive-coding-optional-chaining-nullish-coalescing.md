@@ -17,8 +17,6 @@ pubDate: 2021-12-01
 description: Defensive coding in javascript, learn to use optional chaining and nullish coalescing operator
 ---
 
-# {{title}}
-
 Recent evolutions of Javascript have brought some real cool and useful features, actionable every day.
 
 One that I keep using lately and I've been recommanding a few times in my code review is the combination ["optional chaining ( ?. )"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) + ["Nullish coalescing operator ( ?? )"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator):

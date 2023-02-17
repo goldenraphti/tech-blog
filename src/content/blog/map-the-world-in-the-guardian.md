@@ -5,8 +5,6 @@ pubDate: 2021-04-17
 description: We got published in The Guardian
 ---
 
-# {{title}}
-
 What a moment. The Guardian, the world-reknown newspaper, has published our poject ["Map The World"](https://maptheworld.no/).
 The site, done with [Oslo World](https://www.osloworld.no), the amazing music festival taking place each November in Oslo Norway, meant to gives each us locked in our homes a way to travel & escape through music around the world. And a way for 150 festivals from each continent to showcase their artists and their -canceled- lineups.
 

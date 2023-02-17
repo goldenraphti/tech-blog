@@ -5,8 +5,6 @@ pubDate: 2021-09-17
 description: How to add a preview text for emails working across email clients
 ---
 
-# {{title}}
-
 Days working on emails are always sources of both frustration and learning (when you must ensure Outlook Desktop support)
 
 One of those days: trying to fix the preview text. you know, those 1-2-3 lines displayed before you actually open the email.

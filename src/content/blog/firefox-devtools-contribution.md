@@ -5,8 +5,6 @@ pubDate: 2022-05-20
 description: Every Firefox user will have some of my code
 ---
 
-# {{title}}
-
 I've been meaning to help in some ways the OSS (Open Source Software) projects I love. Among those is Firefox.
 
 Today Firefox DevTools thanks me on their Twitter profile: [https://twitter.com/FirefoxDevTools/status/1527661306735693827](https://twitter.com/FirefoxDevTools/status/1527661306735693827)

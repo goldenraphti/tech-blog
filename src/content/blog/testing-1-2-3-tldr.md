@@ -5,8 +5,6 @@ pubDate: 2021-09-17
 description: Some notes about the interesting podcast episode from Angie Jones interview about testing in web development
 ---
 
-# {{title}}
-
 [JS Party](https://changelog.com/jsparty) podcast released a [great episode](https://jsparty.fm/181) about Testing with the amazing [Angie Jones](https://angiejones.tech/) as a guest, and hosted by [Emma Bostian](https://twitter.com/EmmaBostian) and [Nick Nisi](https://twitter.com/nicknisi).
 
 Here are my notes:

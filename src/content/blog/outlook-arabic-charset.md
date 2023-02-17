@@ -5,8 +5,6 @@ pubDate: 2021-09-16
 description: Hot to fix Outlook bug breaking the charset setting it automatically to arabic charset
 ---
 
-# {{title}}
-
 Outlook Desktop yet found a new way to trick me. And it did cost me several hours to debug this one.
 
 We build emails that get translated in different languages. But then I found out Outlook Desktop broke the email styling.

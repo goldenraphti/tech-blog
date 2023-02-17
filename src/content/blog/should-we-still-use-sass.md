@@ -5,8 +5,6 @@ pubDate: 2022-07-07
 description: Should we still use Sass?
 ---
 
-# {{title}}
-
 Since IE11 died a few weeks back (RIP 🍾 🎉), and because I'll soon(_ish_) start working on design systems ( 🤫 ) I found myself thinking:
 
 _Should we still use Sass? Should I move away from it?_

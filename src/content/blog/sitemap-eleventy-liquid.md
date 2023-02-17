@@ -5,8 +5,6 @@ pubDate: 2022-03-16
 description: How to add a sitemap in .liquid in an eleventy website
 ---
 
-# {{title}}
-
 I am using this blog without any starter, the point being to build every part of it and understand the mechanism as much as possible.
 
 Which is why I faced this issue: the sitemap.

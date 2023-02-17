@@ -21,8 +21,6 @@ pubDate: 2022-02-14
 description: How to add a local proxy in Preact in order to avoid CORS issues when fetching an third-party API
 ---
 
-# {{title}}
-
 For a small side-project I wanted to start a small Preact app to filter & visualize the results of a third-party API I don't have the control of.
 
 Of course ...🥁... CORS problem 🤦‍♂️

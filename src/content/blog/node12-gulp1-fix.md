@@ -5,8 +5,6 @@ pubDate: 2021-09-13
 description: How to fix the issue in Gulp3 & Node 12 "primordials is not defined"
 ---
 
-# {{title}}
-
 Jumping between projects I faced a problem.
 To build my react-native app we needed to get on "Node v12". Once upgraded to it, and getting back on some Episerver development at the moment of building with Gulp I got some error thwon in the console:
 
