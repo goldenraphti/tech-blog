@@ -174,13 +174,6 @@ td > code {
 pre code {
   font-size: 0.85em;
   display: block;
-  background: #222222;
-  color: #ffffff;
-  white-space: pre;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
-  max-width: 100%;
-  min-width: 100px;
   border-radius: 10px;
   padding: var(--padding-code-block);
 }
@@ -216,10 +209,6 @@ pre code {
       & .bulleted-list > ul > li {
         margin-left: 0;
         padding-left: 0;
-      }
-
-      & pre code {
-        margin: 0 calc(var(--padding-code-block) * -1);
       }
     }
   }
