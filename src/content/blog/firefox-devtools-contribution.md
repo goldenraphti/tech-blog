@@ -14,4 +14,12 @@ almost 6 months later, an[ incredible help](https://phabricator.services.mozilla
 
 I think this is one of my proudest moment of my FE dev career so far 🤩
 
-<video preload="auto" playsinline="" aria-label="Embedded video" disablepictureinpicture="" style="width: 100%; height: 100%; position: absolute; background-color: black; top: 0%; left: 0%; transform: rotate(0deg) scale(1.005);" poster="https://pbs.twimg.com/tweet_video_thumb/FTNXUdfWUAAiNJo.jpg" src="https://video.twimg.com/tweet_video/FTNXUdfWUAAiNJo.mp4" type="video/mp4"></video>
+<video
+  autoplay
+  preload="auto"
+  playsinline=""
+  aria-label="Embedded video"
+  disablepictureinpicture=""
+  style="width: 100%; height: 100%;"
+  src="/videos/firefox-devtools-classes-autocomplete.mp4"
+  type="video/mp4"></video>
