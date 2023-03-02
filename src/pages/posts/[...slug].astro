@@ -13,9 +13,66 @@ type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 const { Content } = await post.render();
+
+const dateOptions = {
+  weekday: "short",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 ---
 
 <Layout {...post.data}>
   <h1>{post.data.title}</h1>
+  {
+    (post.data.tags || post.data.pubDate) && (
+      <div class='post-details'>
+        {post.data.tags && (
+          <ul>
+            {post.data.tags
+              .filter((tag) => tag !== "post")
+              .map((tag) => (
+                <li>{tag}</li>
+              ))}
+          </ul>
+        )}
+        {post.data.pubDate && (
+          <p class='pub-date'>
+            {post.data.pubDate.toLocaleDateString(undefined, dateOptions)}
+            {post.data.updatedDate &&
+              " | updated: " +
+                post.data.updatedDate.toLocaleDateString(
+                  undefined,
+                  dateOptions
+                )}
+          </p>
+        )}
+      </div>
+    )
+  }
   <Content />
 </Layout>
+
+<style>
+  .post-details {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  p.pub-date {
+    color: grey;
+  }
+  ul {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+  }
+
+  li {
+    padding: 2px 10px 4px;
+    background-color: var(--primary-color-transparent-20);
+    border-radius: 20px;
+    font-size: 0.8em;
+    margin-left: 0 !important;
+  }
+</style>

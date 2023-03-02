@@ -2,14 +2,13 @@
 
 ## Roadmap
 
-- [ ] add publish date to blog posts
-- [ ] add tags to blog posts
 - [ ] enable RSS & display link for users to subscribe
 - [ ] add og images & fix SEO for each blog post
 - [ ] add an About page
 - [ ] add page with links to side projects
 - [ ] add core critical E2E testing
 - [ ] clean style
+- [ ] fix style priorities colliding with the not(#/#) -> forced the !important in `[...slug].astro -> style -> li margin-left: 0;`
 - [ ] add more style themes + a selector (e.g. Clippy/WinXP/WordArt)
 - [ ] write new blog posts
 
