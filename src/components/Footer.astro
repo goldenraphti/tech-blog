@@ -5,6 +5,7 @@ import {
   TWITTER_LINK_ENABLED,
 } from "../consts";
 import CodeIcon from "../icons/CodeIcon.astro";
+import RssIcon from "../icons/RssIcon.astro";
 ---
 
 <footer class='flex justify-center'>
@@ -22,6 +23,12 @@ import CodeIcon from "../icons/CodeIcon.astro";
         </li>
       )
     }
+    <li class='mx-4 w-6'>
+      <a href='./rss.xml'>
+        <RssIcon />
+        <span class='sr-only'>RSS link</span>
+      </a>
+    </li>
 
     {TWITTER_LINK_ENABLED && <li class='mx-4'>Twitter</li>}
 

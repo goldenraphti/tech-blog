@@ -15,7 +15,7 @@ import "../styles/dark-light-theme-toggle.css";
 
   const getColorPreference = () => {
     if (localStorage.getItem(storageKey))
-      return localStorage.getItem(storageKey);
+      return localStorage.getItem(storageKey) ?? "light";
     else
       return window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
