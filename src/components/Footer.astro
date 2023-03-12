@@ -10,6 +10,12 @@ import RssIcon from "../icons/RssIcon.astro";
 
 <footer class='flex justify-center'>
   <ul class='flex max-w-2-xl'>
+    <li class='mx-4 w-6'>
+      <a href='/rss.xml'>
+        <RssIcon />
+        <span class='sr-only'>RSS link</span>
+      </a>
+    </li>
     <li class='mx-4'>
       <p>Raphaël Ferrand</p>
     </li>
@@ -23,12 +29,6 @@ import RssIcon from "../icons/RssIcon.astro";
         </li>
       )
     }
-    <li class='mx-4 w-6'>
-      <a href='./rss.xml'>
-        <RssIcon />
-        <span class='sr-only'>RSS link</span>
-      </a>
-    </li>
 
     {TWITTER_LINK_ENABLED && <li class='mx-4'>Twitter</li>}
 
