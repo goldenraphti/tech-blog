@@ -13,9 +13,8 @@ import SaveIcon from "../icons/SaveIcon.astro";
         <div class='blob'></div>
         <SaveIcon />
       </div>
-
       {
-        String(Astro.url) === "/" ? (
+        String(Astro.url.pathname) === "/" ? (
           <h1 class='text-2xl md:text-5xl title-text'>Raphaël Ferrand</h1>
         ) : (
           <p class='text-2xl md:text-5xl  title-text mb-0'>Raphaël Ferrand</p>
