@@ -2,7 +2,6 @@
 
 ## Roadmap
 
-- [ ] fix wrapping of posts tags on mobile when many tags (and probably max 3-4 tags per posts, 1 word 2 max)
 - [ ] add og images & fix SEO for each blog post
 - [ ] add an About page
 - [ ] add page with links to side projects
