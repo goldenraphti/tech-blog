@@ -1,8 +1,16 @@
 ---
-title: 3 things that got me pumped in 2023 so far 🤩 🎁
-tags: ["astrojs", "astro", "has()", "has() selector", "View Transitions API"]
+title: 4 things that got me pumped in 2023 so far 🤩 🎁
+tags:
+  [
+    "astrojs",
+    "astro",
+    "has()",
+    "has() selector",
+    "View Transitions API",
+    "color-mix()",
+  ]
 pubDate: 2023-07-05
-description: 3 things that got me pumped so far in 2023. Astro, the has() selector and the View Transitions API
+description: 4 things that got me pumped so far in 2023. Astro, the has() selector, the View Transitions API and the color-mix() CSS function
 ---
 
 Since I started my new job at PayEx/SwedbankPay last october, I got the privilege to have innovation-days every month.
@@ -19,7 +27,7 @@ There were a lot of new features that were either:
 
 </div>
 
-But only 3 of them stands out from the crowd by combining all those qualities. And they immediately became part of my routines.
+But only 4 of them stands out from the crowd by combining all those qualities. And they immediately became part of my routines.
 
 ## Astro
 
@@ -87,3 +95,28 @@ Thanks [Jake Archibald](https://jakearchibald.com/) for this one 🙏.
 And to get cracking on it, I highly recommend reading Dave Rupert blog post on it: [https://daverupert.com/2023/05/getting-started-view-transitions/](https://daverupert.com/2023/05/getting-started-view-transitions/)
 
 </div>
+
+## Color-mix()
+
+The [color-mix()](https://developer.mozilla.org/en-US/docs/Web/CSS/color-mix) CSS function is a very simple one, but it's a game changer for me.
+As the name indicates, it mix colors together. But you can do a lot with it. And it's probably the last nail in the coffin of CSS pre-processors like SASS or LESS.
+
+Before you do things like:
+
+<div class='bulleted-list'>
+
+- darken a color when hover
+- lighten a color when hover
+- add transparency to a color
+
+</div>
+
+you needed to either use some CSS pre-processor and their `darken()` or `transparent()` functions.
+Or decompose your colors into their RGB values, and recompose them with the new values.
+Or create a thousand different variants of your colors.
+
+Now you can mix colors on the place you consume it, so no need to declare 10 variants of transparency for each color you use. No more `--primary-alpha-10`. Now: `color: color-mix(in oklab, var(--primary), transparent, 10%)`.
+
+It keeps the CSS properties much smaller and cleaner, and we're one step closer to not needing CSS pre-processors anymore.
+
+Only issue so far, even though postcss preset-enc is outputting a fallback, it does not work if you're using a CSS custom property in it.
