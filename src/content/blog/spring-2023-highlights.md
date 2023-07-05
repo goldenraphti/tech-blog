@@ -98,7 +98,7 @@ And to get cracking on it, I highly recommend reading Dave Rupert blog post on i
 
 ## Color-mix()
 
-The [color-mix()](https://developer.mozilla.org/en-US/docs/Web/CSS/color-mix) CSS function is a very simple one, but it's a game changer for me.
+The [color-mix()](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix) CSS function is a very simple one, but it's a game changer for me.
 As the name indicates, it mix colors together. But you can do a lot with it. And it's probably the last nail in the coffin of CSS pre-processors like SASS or LESS.
 
 Before you do things like:
