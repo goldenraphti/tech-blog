@@ -1,5 +1,6 @@
 ---
 import "../styles/index.css";
+import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -45,3 +46,5 @@ const {
 <meta property='twitter:image' content={new URL(image, Astro.url)} />
 
 <link rel='sitemap' href='/sitemap-index.xml' />
+
+<ViewTransitions />

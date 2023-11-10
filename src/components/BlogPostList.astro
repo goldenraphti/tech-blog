@@ -14,7 +14,12 @@ const posts = (await getCollection("blog")).sort(
           {i !== 0 && <div class='divider' />}
 
           <a href={`/posts/${post.slug}/`}>
-            <span class='post-title'>{post.data.title}</span>
+            <span
+              class='post-title'
+              transition:name={`blogpost-title-${post.data.title}`}
+            >
+              {post.data.title}
+            </span>
           </a>
         </li>
       ))

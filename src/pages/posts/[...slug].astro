@@ -23,7 +23,9 @@ const dateOptions: Intl.DateTimeFormatOptions = {
 ---
 
 <Layout {...post.data}>
-  <h1>{post.data.title}</h1>
+  <h1 transition:name={`blogpost-title-${post.data.title}`}>
+    {post.data.title}
+  </h1>
   {
     (post.data.tags || post.data.pubDate) && (
       <div class='post-details'>
