@@ -6,18 +6,20 @@
   & > :is(.moon, .sun) {
     fill: var(--secondary-color);
 
-    .theme-toggle:is(:hover, :focus-visible) > & {
+    /* TODO: to be fixed */
+    /* .theme-toggle:is(:hover, :focus-visible) > & {
       fill: var(--secondary-color-transparent-80);
-    }
+    } */
   }
 
   & > .sun-beams {
     stroke: var(--secondary-color);
     stroke-width: 2px;
 
-    .theme-toggle:is(:hover, :focus-visible) & {
+    /* TODO: to be fixed */
+    /* .theme-toggle:is(:hover, :focus-visible) & {
       stroke: var(--secondary-color-transparent-80);
-    }
+    } */
   }
 
   [data-theme="dark"] & {

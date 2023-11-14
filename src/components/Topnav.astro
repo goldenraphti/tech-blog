@@ -3,7 +3,7 @@ import { SIDE_PROJECTS_ENABLED, EMAIL_CONTACT_ENABLED } from "../consts";
 import DarkLightThemeToggle from "./DarkLightThemeToggle.astro";
 ---
 
-<nav>
+<nav transition:persist>
   <ul class='flex'>
     <li class='px-4 md:px-8'><a href='/' class=''>Blog</a></li>
     {
