@@ -18,7 +18,25 @@ Looking around I found 2 solutions `npm pack` & `npm link`. I went with `npm pac
 
 Here were 2 nice articles to help you get cracking at it:
 
+<div class='bulleted-list'>
+
 - [https://snyk.io/blog/best-practices-create-modern-npm-package/](https://snyk.io/blog/best-practices-create-modern-npm-package/)
 - [https://flaviocopes.com/npm-local-package/](https://flaviocopes.com/npm-local-package/)
+
+</div>
+
+## My set-by-step:
+
+<div class='bulleted-list'>
+
+- `cd` into the library package folder
+- run your build script
+- `npm pack`
+- `mv <package-name>.tgz ..`
+- `cd` into the test-project folder
+- `npm install ../<package-name>.tgz`
+- run your test scripts
+
+</div>
 
 _Disclaimer: I know there is better alternatives, but as the sole dev working on it, this is the quick & efficient way._
