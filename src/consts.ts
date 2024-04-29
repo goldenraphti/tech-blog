@@ -8,7 +8,7 @@ export const SITE_URL = "https://raphaelferrand.com";
 export const SITE_AUTHOR_NAME = "Raphaël Ferrand";
 export const SITE_AUTHOR_EMAIL = "goldenraphti@gmail.com";
 
-export const SIDE_PROJECTS_ENABLED = false;
+export const SIDE_PROJECTS_ENABLED = true;
 export const EMAIL_CONTACT_ENABLED = true;
 export const GITHUB_LINK_ENABLED = true;
 export const TWITTER_LINK_ENABLED = false;
