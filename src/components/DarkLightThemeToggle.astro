@@ -3,7 +3,7 @@ import "../styles/dark-light-theme-toggle.css";
 // TODO: once FF supports `has()` -> replace the button-listener JS part of this script by a simple checkbox with has(). The OS listening and saving in local storage is probably unavoidable
 ---
 
-<script>
+<script is:inline data-astro-rerun>
   console.log("😎");
   const storageKey = "theme-preference";
 
