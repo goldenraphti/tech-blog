@@ -62,3 +62,8 @@ Personally, nesting is something I'm really looking forward, but I am using Post
 Then the functions can be hard, but how many projects are actually using it?
 
 I guess for a big project, like a production design-system, you might still need to use it. And I clearly think that it is not worth moving away from it now if you're in a project that was using it for years. Not worth the effort to move out of Sass to then move everything back to PostCSS equivalents. But if you're starting new projects, I guess I would not be reaching out for it (and as a matter of fact, this site is not using it) 🚀
+
+# Browser support
+
+<baseline-status featureId="color-mix"></baseline-status>
+<baseline-status featureId="nesting"></baseline-status>

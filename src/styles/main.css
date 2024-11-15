@@ -234,6 +234,10 @@ footer svg:hover {
   animation-direction: alternate;
 }
 
+baseline-status {
+  border: 1px solid color-mix(in oklab, currentColor, transparent 60%);
+}
+
 @keyframes blobby {
   0% {
     border-radius: 50%;

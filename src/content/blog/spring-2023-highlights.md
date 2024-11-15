@@ -75,6 +75,8 @@ For instance, I've built this website: [https://humankind-timeline.netlify.app/]
 
 But we could also think for example of theme switcher (light/dark theme) which would be possible without JS. Just add a checkbox, and base you CSS on it to select the corresponding CSS Custom Properties (aka CSS variables). That's what I did there: [https://web-experiment.netlify.app/experiments/has-selector/](https://web-experiment.netlify.app/experiments/has-selector/)
 
+<baseline-status featureId="has"></baseline-status>
+
 ## The View Transitions API
 
 Magical. The Web became cool again 🤩.
@@ -95,6 +97,8 @@ Thanks [Jake Archibald](https://jakearchibald.com/) for this one 🙏.
 And to get cracking on it, I highly recommend reading Dave Rupert blog post on it: [https://daverupert.com/2023/05/getting-started-view-transitions/](https://daverupert.com/2023/05/getting-started-view-transitions/)
 
 </div>
+
+<baseline-status featureId="cross-document-view-transitions"></baseline-status>
 
 ## Color-mix()
 
@@ -120,3 +124,5 @@ Now you can mix colors on the place you consume it, so no need to declare 10 var
 It keeps the CSS properties much smaller and cleaner, and we're one step closer to not needing CSS pre-processors anymore.
 
 Only issue so far, even though postcss preset-enc is outputting a fallback, it does not work if you're using a CSS custom property in it.
+
+<baseline-status featureId="color-mix"></baseline-status>

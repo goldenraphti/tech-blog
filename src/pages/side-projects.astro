@@ -4,34 +4,47 @@
 // import Footer from "../components/Footer.astro";
 import BlogPostList from "../components/BlogPostList.astro";
 import Layout from "../layouts/Layout.astro";
+import { LinkPreview } from 'astro-embed';
 ---
 
 <Layout>
   <h1>Side Projects</h1>
   <ul>
     <li>
-      <a href='https://humankind-timeline.raphaelferrand.com'
+      <!-- <a href='https://humankind-timeline.raphaelferrand.com'
         >Humankind Timeline</a
-      > - A timeline of the history of humankind.
+      > - A timeline of the history of humankind. -->
+      <LinkPreview id='https://humankind-timeline.raphaelferrand.com' />
     </li>
     <li>
-      <a href='https://borderlessborderline.com'>Borderless Borderline</a> - Artistic
-      collective. Maps, photography, watercolor, ...
+      <!-- <a href='https://borderlessborderline.com'>Borderless Borderline</a> - Artistic
+      collective. Maps, photography, watercolor, ... -->
+      <LinkPreview id="https://borderlessborderline.com" />
     </li>
     <li>
-      <a href='https://fontane-di-roma.borderlessborderline.com'
-        >Fontane di Roma</a
-      > - An artistic experience through Rome. Navigate through Rome via maps, photo
-      and short stories.
+      <!-- <a href='https://fontane-di-roma.borderlessborderline.com'
+        >Fontane di Roma</a> - An artistic experience through Rome. Navigate through Rome via maps, photo
+        and short stories. -->
+        <LinkPreview id="https://fontane-di-roma.borderlessborderline.com" />
     </li>
     <li>
-      <a href='https://maptheworld.no'>Map The World</a> - When Covid hits the world,
-      travel space and music. Featured in "The Guardian"
+      <!-- <a href='https://maptheworld.no'>Map The World</a> - When Covid hits the world,
+      travel space and music. Featured in "The Guardian" -->
+      <LinkPreview id="https://maptheworld.no" />
     </li>
     <li>
-      <a href='https://web-experiments.raphaelferrand.com'>Web Experiments</a> -
+      <!-- <a href='https://web-experiments.raphaelferrand.com'>Web Experiments</a> -
       A playground to experiment with web technologies. Play and ivestigate, without
-      fear of getting burned. And write up what was learned.
+      fear of getting burned. And write up what was learned. -->
+      <LinkPreview id="https://web-experiments.raphaelferrand.com" />
     </li>
   </ul>
 </Layout>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+</style>
