@@ -7,7 +7,7 @@ import Layout from "../layouts/Layout.astro";
 import { LinkPreview } from 'astro-embed';
 ---
 
-<Layout>
+<Layout title="side-projects">
   <h1>Side Projects</h1>
   <ul>
     <li>
@@ -48,3 +48,57 @@ import { LinkPreview } from 'astro-embed';
     gap: 3rem;
   }
 </style>
+
+<style is:global>
+
+  body.side-projects {
+    background: color-mix(in oklab, var(--primary-color), transparent 95%);
+
+    main {
+      display: grid;
+      min-width: 100%;
+      max-width: unset;
+
+      & h1 {
+        text-align: center;
+        font-size: clamp(2rem, 5vw , 3rem) !important;
+      }
+
+      & ul {
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+
+        @media screen and (max-width: 600px) {
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          & > li article.link-preview {
+            width: clamp(250px, 80%, 400px);
+            margin-inline: auto;
+          }
+        }
+
+        & > li {
+          margin-left: 0 !important;
+          padding-left: 0 !important;
+
+          & > article {
+            margin-inline: auto;
+          }
+        }
+      }
+    }
+
+    & .link-preview {
+      --link-preview-corners: 0.5rem;
+      --link-preview-padding-inline: 1rem;
+      --link-preview-description-lines: 5;
+      background-color: white;
+      font-family: sans-serif;
+      color: color-mix(in oklab, var(--bg-color), transparent 10%);
+    }
+  }
+  </style>

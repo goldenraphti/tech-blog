@@ -96,12 +96,11 @@ body.theme-minimalist {
     }
   }
 
-    [data-theme= "dark"] > & {
+  [data-theme= "dark"] > & {
     border-color: var(--secondary-color);
 
     & .logo .blob {
-      background: var(--text-color);
-      opacity: 0.85;
+      background-color: color-mix(in oklab, var(--secondary-color), white 70%);
     }
 
     & header .title-text,
