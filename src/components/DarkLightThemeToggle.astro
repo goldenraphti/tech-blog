@@ -3,68 +3,48 @@ import "../styles/dark-light-theme-toggle.css";
 // TODO: once FF supports `has()` -> replace the button-listener JS part of this script by a simple checkbox with has(). The OS listening and saving in local storage is probably unavoidable
 ---
 
-<script is:inline data-astro-rerun>
-  console.log("😎");
-  const storageKey = "theme-preference";
+<script is:inline>
+  document.addEventListener('astro:page-load', () => {
+    const theme = (() => {
+      if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+        return localStorage.getItem("theme");
+      }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "light";
+    })();
 
-  const onClick = () => {
-    // flip current value
-    theme.value = theme.value === "light" ? "dark" : "light";
-
-    setPreference();
-  };
-
-  const getColorPreference = () => {
-    if (localStorage.getItem(storageKey)) {
-      console.log("😩", storageKey, localStorage.getItem(storageKey));
-      return localStorage.getItem(storageKey) ?? "light";
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+      document.documentElement.setAttribute("data-theme", "light");
     } else {
-      console.log("🥱", storageKey);
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+      document.documentElement.setAttribute("data-theme", "dark");
     }
-  };
 
-  const setPreference = () => {
-    localStorage.setItem(storageKey, theme.value);
-    reflectPreference();
-  };
+    window.localStorage.setItem("theme", theme);
 
-  const reflectPreference = () => {
-    document.firstElementChild?.setAttribute("data-theme", theme.value);
+    const handleToggleClick = () => {
+      const element = document.documentElement;
+      const newTheme = element.classList.contains("dark") ? "light" : "dark";
+      if (newTheme === "light") {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+      document.documentElement.setAttribute("data-theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
 
-    document
-      .querySelector("#theme-toggle")
-      ?.setAttribute("aria-label", theme.value);
-  };
+      localStorage.setItem("theme", newTheme);
+    };
 
-  const theme = {
-    value: getColorPreference(),
-  };
-
-  // set early so no page flashes / CSS is made aware
-  reflectPreference();
-
-  const setOnLoad = () => {
-    // set on load so screen readers can see latest value on the button
-    reflectPreference();
-
-    // now this script can find and listen for clicks on the control
-    document.querySelector("#theme-toggle")?.addEventListener("click", onClick);
-  };
-
-  // sync with system changes
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", ({ matches: isDark }) => {
-      theme.value = isDark ? "dark" : "light";
-      setPreference();
-    });
-
-  setOnLoad();
-  // Runs on view transitions navigation
-  document.addEventListener("astro:page-load", setOnLoad);
+    document.getElementById("theme-toggle").onclick = handleToggleClick;
+  });
 </script>
 
 <button
