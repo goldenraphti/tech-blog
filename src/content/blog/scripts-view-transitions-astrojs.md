@@ -5,6 +5,16 @@ pubDate: 2023-11-14
 description: Your script running on page load might not run on page navigation after implementing View Transitions in Astro. Here is the solution.
 ---
 
+## Edit
+
+Since the original article was written Astro has changed its API. Now the evant is called `astro:page-load` instead of `astro:after-swap`. Here is the updated code:
+
+```js
+document.addEventListener("astro:page-load", setDarkMode);
+```
+
+## The original article
+
 I have a script running on page load. It's a simple script for the dark-theme toggle. It runs on every page load (and therefore page navigations). Now, since I added View Transitions, it only runs on first page load. It doesn't run on page navigations anymore. If you need it to run on every page load, here is the solution:
 
 ```js

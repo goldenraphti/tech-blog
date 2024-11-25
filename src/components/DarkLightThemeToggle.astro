@@ -64,7 +64,7 @@ import "../styles/dark-light-theme-toggle.css";
 
   setOnLoad();
   // Runs on view transitions navigation
-  document.addEventListener("astro:after-swap", setOnLoad);
+  document.addEventListener("astro:page-load", setOnLoad);
 </script>
 
 <button
