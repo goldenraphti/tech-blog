@@ -72,3 +72,16 @@ e2e:
         path: playwright-report/
         retention-days: 30
 ```
+
+## Viewing the HTML report on your machine
+
+There's supposed to be an obnline viewer, as a PWA keeping your files locally. For some reason it does not worked for me when I needed it. Here's [the link](https://trace.playwright.dev/) if it works better for you.
+
+So my way, for my Windows machine:
+
+- extract the zip file where it downloaded the report
+- open the terminal and run:
+
+```bash
+npx playwright show-report C:\\Users\\your-use-identifier\\Downloads\\playwright-report
+```
