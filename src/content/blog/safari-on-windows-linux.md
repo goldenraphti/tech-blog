@@ -26,7 +26,7 @@ Just use old versions of Playwright. It's always shipping the latest-ish version
 This being said you will also have an old version of Playwright. Which is bad if you want to do actual E2E testing. But if it's just to have an in-browser look and debugging then it's plenty enough.
 
 ```bash
-npx playwright@1.48.1 wk https://raphaelferrand.com
+npx playwright@1.15.2 wk https://raphaelferrand.com
 ```
 
 ## Old Safari versions
@@ -36,13 +36,12 @@ And here is a short list of the Playwright versions corresponding to the Webkit 
 ```bash
 WebKit 18.2 => Playwright 1.49.0
 WebKit 18.0 => Playwright 1.48.2
-WebKit 17.4 => Playwright 1.45.3
-WebKit 17.0 => Playwright 1.38.1
-WebKit 16.4 => Playwright 1.35.1
-WebKit 16.0 => Playwright 1.27.1
-WebKit 15.4 => Playwright 1.23.4
+WebKit 17.4 => Playwright 1.45.3 # I have not tested this version yet
+WebKit 17.0 => Playwright 1.38.1 # I have not tested this version yet
+WebKit 16.4 => Playwright 1.35.1 # I have not tested this version yet
+WebKit 16.0 => Playwright 1.27.1 # I have not tested this version yet
+WebKit 15.4 => Playwright 1.23.4 # I have not tested this version yet
 WebKit 15.0 => Playwright 1.15.2
 WebKit 14.2 => Playwright 1.13.1
 WebKit 14.1 => Playwright 1.9.2
-WebKit 14.0 => Playwright 1.6.2
 ```
