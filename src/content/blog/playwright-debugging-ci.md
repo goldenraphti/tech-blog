@@ -79,8 +79,10 @@ There's supposed to be an obnline viewer, as a PWA keeping your files locally. F
 
 So my way, for my Windows machine:
 
-- extract the zip file where it downloaded the report
-- open the terminal and run:
+<ul>
+  <li>extract the zip file where it downloaded the report</li>
+  <li>open the terminal and run:</li>
+</ul>
 
 ```bash
 npx playwright show-report C:\\Users\\your-use-identifier\\Downloads\\playwright-report
