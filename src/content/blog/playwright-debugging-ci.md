@@ -37,16 +37,6 @@ export default defineConfig({
 });
 ```
 
-```js
-// playwright.config.ts
-export default defineConfig({
-  // ...
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
-  // ...
-});
-```
-
 ```yaml
 # Your yaml file triggering E2E on CI/ Github Actions
 e2e:
@@ -85,5 +75,5 @@ So my way, for my Windows machine:
 </ul>
 
 ```bash
-npx playwright show-report C:\\Users\\your-use-identifier\\Downloads\\playwright-report
+npx playwright show-report C:\\Users\\your-user-identifier\\Downloads\\playwright-report
 ```
