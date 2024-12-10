@@ -1,8 +1,9 @@
 ---
 title: "How to test Safari (and old Safari versions) on Windows and Linux"
-date: 2024-11-28
+pubDate: 2024-11-28
 tags:
   ["safari", "windows", "linux", "playwright", "browser", "testing", "webkit"]
+description: How to easily test old versions of Safari on Windows and Linux using Playwright
 ---
 
 # How to test Safari(including old versions) on Windows and Linux
