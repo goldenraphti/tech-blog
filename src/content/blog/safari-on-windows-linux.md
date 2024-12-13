@@ -46,3 +46,13 @@ WebKit 15.0 => Playwright 1.15.2
 WebKit 14.2 => Playwright 1.13.1
 WebKit 14.1 => Playwright 1.9.2
 ```
+
+## Some non self-executable versions
+
+For versions of Playwright `1.23.4` until `1.45.3` running the command with the version specified inlined will not work. It will throw an error, for different reasons (e.g. "Executable doesn't exist at ...", etc ). The solution is to actually install the playwright version you want (e.g. `1.27.1`). Set this version as the version set in your "package.json" file, and then run the command.
+
+```bash
+npx playwright wk https://raphaelferrand.com
+```
+
+It's a little more work, and you need to remember to revert this version afterwards from your "package.json", but that will do the trick.
