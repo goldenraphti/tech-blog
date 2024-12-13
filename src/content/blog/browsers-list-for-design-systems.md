@@ -58,6 +58,7 @@ So, this is the browserslist I use:
   "last 3 versions",
   "last 2 major versions",
   "> 0.5%",
+  "Firefox ESR",
   "not dead"
 ]
 ```
