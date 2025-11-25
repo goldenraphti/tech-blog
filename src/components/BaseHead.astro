@@ -1,6 +1,7 @@
 ---
 import "../styles/index.css";
 import { ClientRouter } from "astro:transitions";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 export interface Props {
   title: string;
@@ -45,6 +46,13 @@ const {
 <meta property='twitter:description' content={description} />
 <meta property='twitter:image' content={new URL(image, Astro.url)} />
 
+
+<link
+    rel="alternate"
+    type="application/rss+xml"
+    title={SITE_TITLE}
+    href={new URL("rss.xml", Astro.site)}
+/>
 <link rel='sitemap' href='/sitemap-index.xml' />
 
 <!-- test counter.dev analytics -->
