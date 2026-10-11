@@ -1,0 +1,26 @@
+---
+export interface Props {
+  url: string;
+}
+
+const {
+  url,
+} = Astro.props;
+
+const parsedUrl: URL = new URL(url);
+
+---
+
+<a href={url}>
+  <img src={`https://getfavicon.dev/${parsedUrl.hostname}`} alt={`Favicon for ${parsedUrl.hostname}`} width="16" height="16" />
+  <slot />
+</a>
+
+<style>
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+</style>
